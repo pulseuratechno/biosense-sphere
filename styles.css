@@ -1,0 +1,302 @@
+/* PULSEura - BioSense Sphere
+   Clinical + Techno Blue-on-Blue Theme (Brighter Medical Sapphire & High-Contrast Typography)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Brighter Scientific Blue Palette */
+  --bg-clinical-deep: #081635;
+  --bg-clinical-base: #0b1e47;
+  --bg-clinical-elevated: #0f295e;
+  --bg-clinical-surface: #143575;
+  
+  /* Luminous Translucent Card Backgrounds */
+  --bg-navy-card: rgba(16, 43, 94, 0.78);
+  --bg-navy-card-hover: rgba(22, 57, 122, 0.88);
+  --bg-navy-card-active: rgba(26, 68, 145, 0.95);
+  
+  /* Precision Borders */
+  --border-navy: rgba(56, 189, 248, 0.28);
+  --border-navy-bright: rgba(56, 189, 248, 0.65);
+  --border-cyan-glow: rgba(0, 210, 255, 0.75);
+
+  /* High-Tech Accent Blues */
+  --accent-cyan: #00d2ff;
+  --accent-sky: #38bdf8;
+  --accent-ice: #bae6fd;
+  --accent-royal: #2563eb;
+  --accent-sapphire: #1d4ed8;
+  
+  /* High-Contrast Crisp Typography */
+  --text-pure-white: #ffffff;
+  --text-primary: #f8fafc;
+  --text-subtle: #e2e8f0;
+  --text-muted: #cbd5e1;
+  --text-blue-highlight: #38bdf8;
+  
+  /* Medical Luminous Glows */
+  --glow-cyan-soft: 0 0 30px rgba(0, 210, 255, 0.28);
+  --glow-blue-soft: 0 0 40px rgba(37, 99, 235, 0.35);
+  --glow-card-hover: 0 12px 35px -5px rgba(3, 15, 38, 0.7), 0 0 25px rgba(56, 189, 248, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-clinical-deep);
+  color: var(--text-pure-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(180deg, #091a3c 0%, #0c2352 50%, #081738 100%);
+  color: var(--text-pure-white);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #081635;
+}
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+/* Lighter, crisper scientific background grid */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Radiant Medical Atmosphere Glow */
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.45) 0%, rgba(12, 35, 82, 0.2) 60%, transparent 80%);
+}
+
+.bg-radial-glow {
+  background: radial-gradient(circle at center, rgba(0, 210, 255, 0.2) 0%, rgba(37, 99, 235, 0.1) 50%, transparent 75%);
+}
+
+/* Glassmorphic Clinical Navy Cards (Brighter & Crisp) */
+.glass-navy-card {
+  background: var(--bg-navy-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-navy);
+  box-shadow: 0 10px 30px -5px rgba(2, 10, 28, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-navy-card:hover {
+  background: var(--bg-navy-card-hover);
+  border-color: var(--border-navy-bright);
+  box-shadow: var(--glow-card-hover), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+}
+
+.glass-navy-card-active {
+  background: var(--bg-navy-card-active) !important;
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Headings Blue Gradients */
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #ffffff 0%, #7dd3fc 45%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #e0f2fe 0%, #38bdf8 50%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-white {
+  background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Blue Highlights */
+.blue-highlight {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.blue-highlight-glow {
+  color: #00d2ff;
+  text-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+}
+
+/* Prototype Badge Glow */
+.badge-prototype {
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.35), rgba(6, 182, 212, 0.35));
+  border: 1px solid rgba(56, 189, 248, 0.7);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+  color: #ffffff;
+  font-weight: 600;
+  animation: pulse-border 3s infinite ease-in-out;
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    border-color: rgba(56, 189, 248, 0.5);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+  }
+  50% {
+    border-color: rgba(0, 210, 255, 1);
+    box-shadow: 0 0 28px rgba(0, 210, 255, 0.55);
+  }
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-1deg);
+  }
+}
+
+.animate-float-reverse {
+  animation: float-reverse 7s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 25s linear infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.08);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Interactive Slider Track Styling */
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #143575;
+  border-radius: 9999px;
+  height: 8px;
+  outline: none;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00d2ff;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.9);
+  border: 2px solid #ffffff;
+  transition: all 0.2s ease;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 20px #00d2ff;
+}
+
+/* Ambient Canvas */
+#ambient-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+/* Luminous Buttons */
+.btn-cyan-glow {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #1d4ed8 100%);
+  border: 1px solid #38bdf8;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-cyan-glow:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 50%, #2563eb 100%);
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.7);
+  transform: translateY(-2px);
+}
+
+.btn-outline-navy {
+  background: rgba(18, 46, 100, 0.75);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-navy:hover {
+  background: rgba(25, 65, 140, 0.9);
+  border-color: #38bdf8;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+  transform: translateY(-2px);
+}
